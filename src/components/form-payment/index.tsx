@@ -16,6 +16,6 @@ const ComponentsStep: {
   3: PaymentStep,
 }
 
-export default function FormPayment({ step }: FormPaymentProps) {
+export default function FormPayment({ step = 1 }: FormPaymentProps) {
   return <form action="">{ComponentsStep[step]()}</form>
 }

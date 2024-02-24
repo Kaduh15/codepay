@@ -18,7 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={twMerge(inter.variable, 'font-sans')}>{children}</body>
+      <body
+        className={twMerge(
+          inter.variable,
+          'mx-auto min-h-screen font-sans text-slate-700',
+        )}
+      >
+        {children}
+      </body>
     </html>
   )
 }

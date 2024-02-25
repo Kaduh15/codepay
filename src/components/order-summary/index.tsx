@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Minus, Plus } from 'lucide-react'
 
 import mouse from '../../assets/mouse.jpeg'
+import Button from '../button'
 
 export default function OrderSummary() {
   return (
@@ -35,15 +36,20 @@ export default function OrderSummary() {
         </div>
 
         <section className="w-full space-y-5">
-          <form action="#" className="flex w-full justify-between">
+          <form action="#" className="flex w-full justify-between gap-4">
             <input
               type="text"
               placeholder="Cupom de Desconto"
               className="rounded-md bg-zinc-100 px-5 py-4 text-slate-400"
             />
-            <button className="rounded border-2 border-green-500 px-5 py-4 text-green-500">
+            <Button
+              variants={{
+                style: 'outline',
+                size: 'lg',
+              }}
+            >
               Aplicar
-            </button>
+            </Button>
           </form>
           <div className="grid w-full grid-cols-2 grid-rows-3 gap-4">
             <p className="text-start text-slate-500">Taxa</p>

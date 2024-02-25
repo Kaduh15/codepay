@@ -1,6 +1,6 @@
 import { ShoppingCartStep } from '@/types'
 
-import Button from '../button'
+import Button from '../ui/button'
 import AccountStep from './account-step'
 import PaymentStep from './payment-step'
 import ShippingStep from './shipping-step'

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Minus, Plus } from 'lucide-react'
 
 import mouse from '../../assets/mouse.jpeg'
-import Button from '../button'
+import Button from '../ui/button'
 
 export default function OrderSummary() {
   return (

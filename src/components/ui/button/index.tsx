@@ -2,12 +2,13 @@ import { ButtonHTMLAttributes } from 'react'
 
 import { tv, type VariantProps } from 'tailwind-variants'
 
-const button = tv({
+export const button = tv({
   variants: {
     style: {
       primary:
-        'rounded-md bg-green-500 px-5 py-4 text-base font-medium text-white',
-      outline: 'rounded border-2 border-green-500 px-5 py-4 text-green-500',
+        'rounded-md bg-green-500 px-5 py-4 text-base font-medium text-white hover:bg-green-600',
+      outline:
+        'rounded border-2 border-green-500 px-5 py-4 text-green-500 hover:bg-green-500 hover:text-white',
       link: 'font-medium text-red-500',
     },
     size: {

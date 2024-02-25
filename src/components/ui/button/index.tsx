@@ -6,14 +6,14 @@ const button = tv({
   variants: {
     style: {
       primary:
-        'bg-green-500 text-white rounded-md px-5 py-4 font-medium text-base',
+        'rounded-md bg-green-500 px-5 py-4 text-base font-medium text-white',
       outline: 'rounded border-2 border-green-500 px-5 py-4 text-green-500',
       link: 'font-medium text-red-500',
     },
     size: {
       sm: 'text-sm',
       md: 'text-base',
-      lg: 'px-4 py-3 text-md border-2',
+      lg: 'text-md border-2 px-4 py-3',
     },
   },
   compoundVariants: [

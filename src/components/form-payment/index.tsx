@@ -21,12 +21,12 @@ export default function FormPayment({ step = 1 }: FormPaymentProps) {
   const CurrentStep = FormComponentsStep[step]
 
   return (
-    <section className="flex h-full w-full flex-col items-end justify-end gap-2">
+    <section className="w-full space-y-12">
       <form action="" className="h-full w-full">
         <CurrentStep />
       </form>
       <hr className="w-full" />
-      <div className="space-x-12">
+      <div className="space-x-12 text-end">
         <Button
           variants={{
             style: 'link',

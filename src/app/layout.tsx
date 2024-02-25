@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { Analytics } from '@vercel/analytics/react'
+
 import './globals.css'
 import { twMerge } from 'tailwind-merge'
 
@@ -18,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <Analytics />
       <body
         className={twMerge(
           inter.variable,

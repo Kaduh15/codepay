@@ -11,6 +11,9 @@ export const button = tv({
         'rounded border-2 border-green-500 px-5 py-4 text-green-500 hover:bg-green-500 hover:text-white',
       link: 'font-medium text-red-500',
     },
+    disabled: {
+      true: 'cursor-not-allowed opacity-50',
+    },
     size: {
       sm: 'text-sm',
       md: 'text-base',

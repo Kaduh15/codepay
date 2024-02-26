@@ -11,8 +11,20 @@ import { z } from 'zod'
 import { accountStepFormAction } from '../actions'
 
 const AccountFormSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(6),
+  email: z
+    .string({
+      required_error: 'Email é obrigatório',
+    })
+    .email({
+      message: 'Email inválido',
+    }),
+  password: z
+    .string({
+      required_error: 'Senha é obrigatória',
+    })
+    .min(6, {
+      message: 'Senha deve ter no mínimo 6 caracteres',
+    }),
 })
 
 type AccountForm = z.infer<typeof AccountFormSchema>
@@ -24,6 +36,8 @@ export default function AccountStep() {
     handleSubmit,
   } = useForm<AccountForm>({
     resolver: zodResolver(AccountFormSchema),
+    shouldFocusError: true,
+    mode: 'all',
   })
 
   const onSubmit = handleSubmit(() => {

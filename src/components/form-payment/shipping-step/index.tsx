@@ -70,6 +70,7 @@ export default function ShippingStep() {
     handleSubmit,
   } = useForm<ShippingForm>({
     resolver: zodResolver(ShippingFormSchema),
+    shouldFocusError: true,
     mode: 'onBlur',
   })
   const onSubmit = handleSubmit(() => {

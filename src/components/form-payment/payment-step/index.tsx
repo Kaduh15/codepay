@@ -50,8 +50,10 @@ export default function PaymentStep() {
     handleSubmit,
   } = useForm<PaymentForm>({
     resolver: zodResolver(PaymentStepSchema),
+    shouldFocusError: true,
     mode: 'all',
   })
+
   const onSubmit = handleSubmit(() => {
     paymentStepFormAction()
   })

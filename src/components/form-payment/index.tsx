@@ -21,10 +21,11 @@ export default function FormPayment({ step = 1 }: FormPaymentProps) {
   const CurrentStep = FormComponentsStep[step]
 
   return (
-    <section className="w-full space-y-12">
-      <form action="" className="h-full w-full">
-        <CurrentStep />
-      </form>
+    <section className="w-1/2 space-y-12">
+      <h2 className="justify-self-start-start text-xl font-semibold text-slate-800">
+        Detalhes da conta
+      </h2>
+      <CurrentStep />
       <hr className="w-full" />
       <div className="space-x-12 text-end">
         <Button

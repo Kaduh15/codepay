@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes treme {
+  0% {
+    margin-left: 0;
+    rotate: 0deg;
+  }
+  25% {
+    margin-left: 5px;
+    rotate: -5deg;
+  }
+  50% {
+    margin-left: 0;
+    rotate: 0deg;
+  }
+  75% {
+    margin-left: -5px; 
+    rotate: 5deg;}
+  100% {
+    margin-left: 0; 
+    rotate: 0deg;
+  }
+}
+
+@layer utilities {
+  .animate-treme {
+    animation: treme 0.1s;
+  }
+
+  .animate-iteration-3 {
+    animation-iteration-count: 3;
+  }
+}
